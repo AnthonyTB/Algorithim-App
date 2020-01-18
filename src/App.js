@@ -3,6 +3,8 @@ import AlgoForm from './Routes/Home/AlgoForm';
 import Search from './Components/Forms/SearchForm';
 import { Route, Switch, withRouter } from 'react-router-dom';
 import Context from './Components/Context/Context';
+import Sorting from './Routes/Sorting/Sorting';
+import Recursion from './Routes/Recursion/Recursion';
 
 class App extends React.Component {
   static defaultProps = {
@@ -73,6 +75,20 @@ class App extends React.Component {
               path='/Search'
               render={routeProps => {
                 return <Search {...routeProps} />;
+              }}
+            />
+            <Route
+              exact
+              path='/Sorting'
+              render={routeProps => {
+                return <Sorting {...routeProps} />;
+              }}
+            />
+            <Route
+              exact
+              path='/Recursion'
+              render={routeProps => {
+                return <Recursion {...routeProps} />;
               }}
             />
           </Switch>
